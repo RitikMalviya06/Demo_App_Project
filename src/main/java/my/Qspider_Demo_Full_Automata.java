@@ -32,10 +32,10 @@ public class Qspider_Demo_Full_Automata {
 		
 		// Web Element Text box
 		
-		driver.findElement(By.xpath("//input[@id='name']")).sendKeys("ritik");
+		driver.findElement(By.xpath("//input[@id='name']")).sendKeys("test");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ritikma1@gmail.com");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("rk123");
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("test@gmail.com");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("test123");
 		Thread.sleep(2000);
 		
 		
@@ -71,7 +71,7 @@ public class Qspider_Demo_Full_Automata {
 		Thread.sleep(2000);
 		
 		
-		// Submit click not working  
+		// Submit click  
 		
 		driver.findElement(By.xpath("//a[text()='Submit Click']")).click();
 		Thread.sleep(2000);
@@ -128,7 +128,7 @@ public class Qspider_Demo_Full_Automata {
 		
 		
 		
-		// audio play is working but pause not working 
+		// audio play 
 		
 		driver.findElement(By.linkText("Audio")).click();
 		Thread.sleep(2000);
@@ -136,24 +136,8 @@ public class Qspider_Demo_Full_Automata {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("document.querySelector('Audio').play();");
 		Thread.sleep(2000);
-		//jse.executeAsyncScript("document.querySelector('Audio').pause();");
-		
-		
-		
-		// video  working but script not continue & play is working but pause not working 
-		
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//section[text()='Video']")).click();
-//		Thread.sleep(2000);
-//    	WebElement video = driver.findElement(By.xpath("//video[@class='w-[55%] rounded-md']"));
-//		JavascriptExecutor jse2 = (JavascriptExecutor)driver;
-//		jse2.executeAsyncScript("arguments[0].play();",video);
-//		Thread.sleep(2000);
-//		jse2.executeAsyncScript("arguments[0].pause();",video);
 	
-		
-		
-		
+				
 		// popups javascript alert popups
 		
 		driver.findElement(By.xpath("//section[@class='poppins text-[15px]'and(text()='Popups')]")).click();
@@ -191,7 +175,7 @@ public class Qspider_Demo_Full_Automata {
 			{
 				driver.switchTo().window(rr1);
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ritik@gmail.com");
+				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("test@gmail.com");
 				Thread.sleep(2000);
 				driver.close();
 				
@@ -207,7 +191,6 @@ public class Qspider_Demo_Full_Automata {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//li[@class='  flex items-center w-[100%] justify-between py-1 px-2 cursor-pointer poppins']")).click();
 		Thread.sleep(2000);
-		//driver.findElement(By.xpath("//a[@class='poppins ps-1 pe-3 py-1 font-semibold flex items-center justify-between w-full text-[14px] text-orange-500 active'and(text()='New Tab')]")).click();
 		String pa2 = driver.getWindowHandle();
 		driver.findElement(By.xpath("//button[text()='Open window in new Tab']")).click();
 		for(String rr2:driver.getWindowHandles())
@@ -216,7 +199,7 @@ public class Qspider_Demo_Full_Automata {
 			{
 				driver.switchTo().window(rr2);
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("text@gmail.com");
+				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("test@gmail.com");
 				Thread.sleep(2000);
 				driver.close();
 			}
@@ -243,7 +226,7 @@ public class Qspider_Demo_Full_Automata {
 			break;	
 		}
 	}
-	driver.findElement(By.id("username")).sendKeys("text@gmail.com");
+	driver.findElement(By.id("username")).sendKeys("test@gmail.com");
 	driver.close();
 	
 	
@@ -334,26 +317,6 @@ public class Qspider_Demo_Full_Automata {
 		Thread.sleep(2000);
 		
 		
-		// Filp uploads // using robot not working 
-		
-//		Thread.sleep(2000);
-//		driver.findElement(By.id("fileInput")).click();
-//		Thread.sleep(2000);
-//		StringSelection str = new StringSelection("C:\\Users\\hp\\Downloads\\SQL.pdf");
-//		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(str, null);
-//		robot.keyPress(KeyEvent.VK_CONTROL);
-//		robot.keyPress(KeyEvent.VK_V);
-//		
-//		robot.keyRelease(KeyEvent.VK_CONTROL);
-//		robot.keyRelease(KeyEvent.VK_V);
-//		
-//		robot.keyPress(KeyEvent.VK_ENTER);
-//		robot.keyRelease(KeyEvent.VK_ENTER);
-		
-		
-		
-		
-		
 		// Filp uploads  custom button //using Auto IT
 		
 		driver.findElement(By.xpath("//a[text()='Custom Button']")).click();
@@ -362,15 +325,6 @@ public class Qspider_Demo_Full_Automata {
 		Thread.sleep(2000);
 		Runtime.getRuntime().exec("C:\\Users\\hp\\Documents\\fileupload1.exe");
 		Thread.sleep(4000);
-		
-		
-		// Filp uploads Drap and drop not working 
-		
-		
-//		driver.findElement(By.xpath("//section[text()='File Uploads']")).click();
-//		driver.findElement(By.xpath("//a[text()='Drag and Drop']")).click();
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//div[@class='drop-container loading']")).click();
 		
 		
 		// Modal Default
@@ -400,10 +354,10 @@ public class Qspider_Demo_Full_Automata {
 		
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//section[text()='Download ']")).click();
-		driver.findElement(By.xpath("//textarea[@name='textarea']")).sendKeys("ritik");
+		driver.findElement(By.xpath("//textarea[@name='textarea']")).sendKeys("test");
 		driver.findElement(By.xpath("//input[@id='fileName']")).clear();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@id='fileName']")).sendKeys("ritik.txt");
+		driver.findElement(By.xpath("//input[@id='fileName']")).sendKeys("test.txt");
 		driver.findElement(By.xpath("//button[@id='downloadButton']")).click();
 		
 		
@@ -412,7 +366,7 @@ public class Qspider_Demo_Full_Automata {
 		
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//section[text()='Hidden division']")).click();
-		driver.findElement(By.xpath("//input[@class='w-full h-10 px-4 m-2 border-2 border-stone-600 rounded-md']")).sendKeys("ritik");
+		driver.findElement(By.xpath("//input[@class='w-full h-10 px-4 m-2 border-2 border-stone-600 rounded-md']")).sendKeys("test");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@id='hiddendiv']")).click();
 		
@@ -455,28 +409,12 @@ public class Qspider_Demo_Full_Automata {
 		time.click();
 		time.sendKeys("525pm");
 		
-		
-		
-		
-		
-		//  Date & time picker  ( time picker / time picker clock)
-		// span tag not working
-		
-		
+				
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[text()='Time Picker Clock']")).click();
 		driver.findElement(By.xpath("//div[@class='MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd Mui-readOnly MuiInputBase-readOnly css-1bn53lx']/descendant::input[@aria-label='Choose time, selected time is 12:00 AM']")).click();
 		Thread.sleep(1000);
-//		driver.findElement(By.xpath("//span[@class='MuiClockNumber-root css-1flhz3h']")).click();
-//		driver.findElement(By.xpath("//span[@aria-label='1 hours']")).click();
-//		Thread.sleep(1000);
-//		driver.findElement(By.xpath("//span[@aria-label='20 minutes']")).click();
-//		Thread.sleep(1000);
-//		driver.findElement(By.xpath("//span[@class='MuiTypography-root MuiTypography-subtitle2 MuiTimePickerToolbar-ampmLabel MuiPickersToolbarText-root css-n4qtc0']")).click();
-		driver.findElement(By.xpath("//button[text()='OK']")).click();
-		
-		
-		
+    	driver.findElement(By.xpath("//button[text()='OK']")).click();
 		
 		
 		// sroll ( in a new tab / vertical  ) 
@@ -536,40 +474,6 @@ public class Qspider_Demo_Full_Automata {
 		
 		
 		driver.switchTo().window(pa);            // important part
-		
-		
-		
-//		 sroll ( in a new tab / infinite   dont  no)
-//		
-//		
-//		
-//		driver.findElement(By.xpath("//a[text()='Infinite']")).click();
-//		String infinitep = driver.getWindowHandle();
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//a[text()='Open In New Tab']")).click();
-//		Set<String> infinitec = driver.getWindowHandles();
-//		for(String finite:infinitec)
-//		{
-//			driver.switchTo().window(finite);
-//			if(driver.getTitle().equals("Demoapps | Qspider"))
-//			{
-//				break;
-//			}
-//		}
-//		Thread.sleep(2000);
-//		JavascriptExecutor fin = (JavascriptExecutor)driver;
-//		Thread.sleep(2000);
-//		fin.executeScript("window.scrollBy(5000,0)");
-//		driver.close();
-//		
-//		
-//		driver.switchTo().window(pa);            // important part
-		
-		
-		
-		
-		// sroll ( within the frame / vertical  )
-		
 		
 		
 		Thread.sleep(2000);
@@ -662,7 +566,7 @@ public class Qspider_Demo_Full_Automata {
 		WebElement defaultirame = driver.findElement(By.xpath("//iframe[@class='w-full h-96']"));
 		driver.switchTo().frame(defaultirame);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("ritik1@gmail.com");
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("test1@gmail.com");
 		
 		
 		
@@ -670,24 +574,6 @@ public class Qspider_Demo_Full_Automata {
 		
 		driver.switchTo().window(pa);            // important part
 		
-		
-		
-//		// frame ( nested iframe )
-//		
-//		Thread.sleep(2000);
-//		driver.findElement(By.xpath("//a[contains(text(),'Nested iframe')]")).click();
-//		Thread.sleep(2000);
-//		WebElement nestediframe = driver.findElement(By.xpath("(//iframe[@class='w-full h-96'])[2]"));
-//		driver.switchTo().frame(nestediframe);
-//		Thread.sleep(1000);
-//		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("rit1@gmailcom");
-//		
-//		
-//		driver.switchTo().window(pa);            // important part
-//		
-		
-		
-		// frame ( multiple iframe )
 		
 		
 		Thread.sleep(2000);
@@ -707,7 +593,7 @@ public class Qspider_Demo_Full_Automata {
 		Thread.sleep(1000);
 		driver.switchTo().frame(multipleiframe2);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("malviya");
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("test");
 		
  
 	
@@ -760,17 +646,8 @@ public class Qspider_Demo_Full_Automata {
 		driver.findElement(By.xpath("//section[@class='poppins text-[14px]'and(text()='Keyboard')]")).click();
 		 driver.findElement(By.xpath("//input[@id='email']"));
 		Actions email = new Actions(driver);
-		email.setActiveKeyboard("ritik");
+		email.setActiveKeyboard("test");
 		
-		
-		
-		
-		
-		
-		
-		
-		
-
 		
 	}
 
